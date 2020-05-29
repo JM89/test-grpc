@@ -1,0 +1,58 @@
+syntax = "proto3";
+
+option csharp_namespace = "ProductGrpcService";
+
+package product;
+
+service ProductServiceDefinition {
+    rpc Create(CreateRequest) returns (CreateResponse);
+    rpc Read(ReadRequest) returns (ReadResponse);
+    rpc Update(UpdateRequest) returns (UpdateResponse);
+    rpc Delete(DeleteRequest) returns (DeleteResponse);
+    rpc ReadAll(ReadAllRequest) returns (ReadAllResponse);
+}
+
+message Product {
+    int64 id = 1;
+    string name = 2;
+    string description = 3;
+}
+
+message CreateRequest {
+    Product Product = 1;
+}
+
+message CreateResponse {
+    int64 id = 1;
+}
+
+message ReadRequest {
+    int64 id = 1;
+}
+
+message ReadResponse {
+    Product Product = 1;
+}
+
+message UpdateRequest {
+    Product Product = 1;
+}
+
+message UpdateResponse {
+    int64 updated = 1; 
+}
+
+message DeleteRequest {
+    int64 id = 1;
+}
+ 
+message DeleteResponse {
+    int64 deleted = 1;
+}
+
+message ReadAllRequest {
+}
+
+message ReadAllResponse {
+    repeated Product Products = 1;
+}
