@@ -5,6 +5,7 @@
 * [x] Setup a basic implementation for a gRPC service and client applications
 * [ ] Use Stream Request/Response: [Example](https://github.com/grpc/grpc-dotnet/tree/master/examples/Mailer)
 * [ ] Create a Python client [Example](https://github.com/grpc/grpc/tree/master/examples/python/helloworld)
+* [ ] Check for the [BloomRPC](https://github.com/uw-labs/bloomrpc) client
 
 ## Getting Started
 
